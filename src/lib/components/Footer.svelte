@@ -12,19 +12,17 @@
             margin-bottom: 2rem;
         }
         button {
-            background-color: white;
             border: 1px solid rgb(255, 255, 255);
             border-radius: 1rem 1rem 1rem 1rem;
             padding: 1rem;
-            color: black;
+            color: white;
             font-size: 1.5rem;
             font-weight: bold;
-            margin-left: 2rem;
-            margin-right: 2rem;
+          
         }
         button:hover {
-            background-color: rgb(255, 255, 255);
-            color: black;
+            color: white;
+            
         }
     </style>
 </footer>

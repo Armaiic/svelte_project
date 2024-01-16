@@ -33,7 +33,7 @@
             border-radius: 5px;
             padding: 0.5rem;
         }
-
+        
         .score__title {
               
             background-color: white;
