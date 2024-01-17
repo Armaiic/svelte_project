@@ -1,24 +1,28 @@
-<script>
+<script lang="ts">
   import Button from "./Button.svelte";
+ 
 </script>
 
 <div class="game--container">
  
   <div class="gridtop-container">
     <div class="grid-item-top-left">
-      <Button type="paper" />
+      <Button type="paper"  />
     </div>
     <div class="grid-item-top-right">
-      <Button type="scissors" />
+      <Button type="scissors"  />
     </div>
-    
+
   </div>
-  <div class="grid-item-center">
-    <Button type="rock" />
+  <div class="grid-item-center" >
+    <Button type="rock"  />
   </div>
 </div>
 
 <style>
+
+
+
  .game--container {
   background-image: url('./src/lib/icons/bg-triangle.svg');
   background-repeat: no-repeat;
@@ -68,5 +72,3 @@
 
 
   
-
-
