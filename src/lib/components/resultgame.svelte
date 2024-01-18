@@ -2,14 +2,15 @@
    import TextResult from "./TextResult.svelte";
    import { displaychoiceplay, displaychoicecomp } from "./store";
    let showResult = false;
+   import { fade,fly } from "svelte/transition";
 
    setTimeout(() => {
       showResult = true;
    }, 400);
 </script>
 
-<div class="resultgame">
-   <div class="player">
+<div  class="resultgame">
+   <div  class="player">
       <h1>YOU PICKED</h1>
       <div class="choice--content">
          <div class="button__display_{$displaychoiceplay}">
@@ -21,7 +22,7 @@
       </div>
    </div>
 
-   <div>
+   <div >
       {#if showResult}
          <TextResult />
          <script>

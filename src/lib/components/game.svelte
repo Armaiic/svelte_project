@@ -1,12 +1,12 @@
 <script lang="ts">
   import Button from "./Button.svelte";
- 
+  import { fade,fly,scale } from "svelte/transition";
 </script>
 
-<div class="game--container">
- 
-  <div class="gridtop-container">
-    <div class="grid-item-top-left">
+<div  transition:scale class="game--container">
+  <div transition:fade class="gridtop-container">
+    <div  class="grid-item-top-left">
+      
       <Button type="paper"  />
     </div>
     <div class="grid-item-top-right">
@@ -14,7 +14,7 @@
     </div>
 
   </div>
-  <div class="grid-item-center" >
+  <div  transition:fade class="grid-item-center" >
     <Button type="rock"  />
   </div>
 </div>

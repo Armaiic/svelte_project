@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import { choicebol, result} from "./store";
-  
+    
 
 
     function clickreturn() {
@@ -17,7 +17,7 @@
 <div class="result--container">
     <div class="result--content">
         <div class="result--content__text">
-            <h1>{$result}</h1>
+            <h1 translate="yes">{$result}</h1>
         </div>
         <div class="result--content__button">
             <button class="button--play" on:click={clickreturn}
