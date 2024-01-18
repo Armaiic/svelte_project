@@ -1,15 +1,17 @@
-<script>
-    import Button from "./Button.svelte";
-    import { choicebol, result } from "./store";
-    import { playBol } from "./store";
+<script lang="ts">
+
+    import { choicebol, result} from "./store";
+  
+
 
     function clickreturn() {
-        const homereturn = document.querySelector(".button--play");
+        const homereturn = document.querySelector(".result--container");
          choicebol.set(false);
          
          console.log($choicebol);
-       
+    
     }
+      
 </script>
 
 <div class="result--container">
@@ -26,7 +28,8 @@
 </div>
 
 <style>
-    .result--content__button {
+
+    .result--content__button  {
         display: flex;
         justify-content: center;
         align-items: center;

@@ -6,8 +6,9 @@
     import { choicebol, result,score } from "./store";
 
     const choices = ["rock", "paper", "scissors"];
+  
     function handleClick() {
-        console.log(type); // Replace with your desired logic
+        console.log(type); 
         playerSelect(type);
         console.log(computerChoice);
         console.log($result);
@@ -21,6 +22,7 @@
             computerChoice =
                 choices[Math.floor(Math.random() * choices.length)];
             determineWinner();
+            
         }
 
         function determineWinner() {
@@ -39,6 +41,9 @@
             }
         }
     }
+
+
+    
 </script>
 
 <div class="button--container">
