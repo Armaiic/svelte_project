@@ -3,7 +3,7 @@
     let playerChoice = "";
     let computerChoice = "";
 
-    import { choicebol, result,score } from "./store";
+    import { choicebol, result,score,displaychoiceplay,displaychoicecomp } from "./store";
 
     const choices = ["rock", "paper", "scissors"];
   
@@ -14,13 +14,17 @@
         console.log($result);
         choicebol.set(true);
         console.log($choicebol);
+        console.log($displaychoiceplay);
+            console.log(playerChoice);
         return $result;
 
         function playerSelect(choice: string) {
             playerChoice = choice;
-            console.log(playerChoice);
+            displaychoiceplay.set(playerChoice);
+            
             computerChoice =
                 choices[Math.floor(Math.random() * choices.length)];
+                displaychoicecomp.set(computerChoice);
             determineWinner();
             
         }
@@ -93,7 +97,7 @@
         height: 100%;
         max-height: 100px;
         border-radius: 50%;
-        background-color: white;
+        
     }
 
     .button__content img {
@@ -106,7 +110,8 @@
     .rock {
         border: 15px solid red;
 
-        background-color: white;
+        background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 63%, rgba(206,206,206,1) 67%, rgba(202,202,202,1) 69%, rgba(112,112,112,1) 96%);
     }
     .rock:hover {
         border: 15px solid red;
@@ -116,7 +121,8 @@
     .paper {
         border: 15px solid blue;
         border-radius: 50%;
-        background-color: white;
+        background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 63%, rgba(206,206,206,1) 67%, rgba(202,202,202,1) 69%, rgba(112,112,112,1) 96%);
     }
     .paper:hover {
         transform: matrix(1.1, 0, 0, 1.1, 0, 0);
@@ -124,7 +130,8 @@
     }
     .scissors {
         border: 15px solid green;
-        background-color: white;
+        background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 63%, rgba(206,206,206,1) 67%, rgba(202,202,202,1) 69%, rgba(112,112,112,1) 96%);
     }
     .scissors:hover {
         border: 15px solid green;

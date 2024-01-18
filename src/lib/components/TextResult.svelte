@@ -28,7 +28,14 @@
 </div>
 
 <style>
-
+    .result--content__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+       
+        color: white;
+    }
     .result--content__button  {
         display: flex;
         justify-content: center;
@@ -36,8 +43,9 @@
         font-size: 20px;
     }
     .result--content__button button {
+        
         background-color: white;
-        color: red;
+        color: hsl(214, 47%, 23%);
         font-size: 25px;
         font-weight: 700;
 
