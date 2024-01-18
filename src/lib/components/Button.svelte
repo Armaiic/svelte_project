@@ -1,19 +1,21 @@
 <script lang="ts">
-  
-   export  let type = "";
+    export let type = "";
     let playerChoice = "";
-    let computerChoice = ""; 
-    let result = "";
+    let computerChoice = "";
+
+    import { choicebol, result,score } from "./store";
+
     const choices = ["rock", "paper", "scissors"];
     function handleClick() {
         console.log(type); // Replace with your desired logic
         playerSelect(type);
-        console.log(computerChoice)
-        console.log(result);
-        return type;
-        
+        console.log(computerChoice);
+        console.log($result);
+        choicebol.set(true);
+        console.log($choicebol);
+        return $result;
 
-     function playerSelect(choice: string) {
+        function playerSelect(choice: string) {
             playerChoice = choice;
             console.log(playerChoice);
             computerChoice =
@@ -23,15 +25,17 @@
 
         function determineWinner() {
             if (playerChoice === computerChoice) {
-                result = "It's a tie!";
+                $result = "It's a tie!";
             } else if (
                 (playerChoice === "rock" && computerChoice === "scissors") ||
                 (playerChoice === "paper" && computerChoice === "rock") ||
                 (playerChoice === "scissors" && computerChoice === "paper")
             ) {
-                result = "You win!";
+                $result = "You win!";
+                score.set($score + 1);
             } else {
-                result = "You lose!";
+                $result = "You lose!";
+                score.set($score - 1);
             }
         }
     }
@@ -73,6 +77,8 @@
     }
 
     .button-choice:hover {
+        cursor: pointer;
+
         background-color: white;
     }
 
@@ -109,7 +115,7 @@
     }
     .paper:hover {
         transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-        border: 20px solid blue;
+        border: 15px solid blue;
     }
     .scissors {
         border: 15px solid green;

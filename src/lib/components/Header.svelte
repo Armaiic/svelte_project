@@ -1,13 +1,14 @@
 <script>
+    import { score } from "./store";
 
-    export let score = 0;
+    
 </script>
 <header>
     <div class="scoreBoard ">
     <img class="logo" src='./src/lib/icons/logo.svg' alt="Title_logo"> 
     <div class="score-container">
         <div class="score__title">Score</div>
-        <div class="score__number">{score}</div>
+        <div class="score__number">{$score}</div>
     </div>
 
     </div>
